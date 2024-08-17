@@ -1,0 +1,138 @@
+body {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.semester-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.semester {
+    background-color: #b6e8ff;
+    padding: 10px;
+    border: 1px solid #1c1b1b;
+    border-radius: 5px;
+    text-align: center;
+}
+header {
+    background-color: #85b8ef;
+    padding: 20px;
+    text-align: center; /* Centra el texto dentro del header */
+  
+
+}
+h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.semester h2 {
+    font-size: 1.5em;
+}
+
+.course {
+    display: block;
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    user-select: none;
+}
+
+.course input {
+    display: none; /* Ocultar el checkbox original */
+}
+
+.course span {
+    display: block;
+    font-size: 1em;
+}
+
+.course.not-available {
+    background-color: #ffffff;
+    color: #2e2d2d;
+    cursor: not-allowed;
+}
+
+.course.available {
+    background-color: #9fa3ed;
+    color: #333;
+}
+
+.course.completed {
+    background-color: #60d660;
+    color: #333;
+}
+
+.course:hover {
+    background-color: #cad7f3;
+}
+
+
+.color-index {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+}
+
+.color-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.color-index {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+}
+
+.color-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.color-item:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.color-item.completed:before {
+    background-color: #60d660;
+}
+
+.color-item.available:before {
+    background-color: #9fa3ed;
+}
+
+.color-item.not-available:before {
+    background-color: #fffbfb;
+}
+
+.color-item:last-child {
+    margin-bottom: 0;
+}
